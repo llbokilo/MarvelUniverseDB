@@ -11,6 +11,7 @@ class OrganisationService
     public function __construct(){
         $this->addOrga(new Organisation('S.H.I.E.L.D.', 'Washington'));
         $this->addOrga(new Organisation('Les Avengers', 'Los Angeles'));
+        $this->addOrga(new Organisation('La confrérie des mauvais mutants', 'Genosha'));
     }
     public function getListOrga(){
         return $this->_listeOrgas;

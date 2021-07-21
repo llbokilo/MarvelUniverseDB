@@ -8,22 +8,21 @@ class HeroService
 {
     private $_listeHeros=[];
 
-    public function __construct()
-    {
-        $this->addHero(new Hero('Rogers','Steve',false,'Captain Americana', 'Un maigrichon dopé par  l armee'));
+    public function __construct(){
+        $this->addHero(new Hero('Rogers','Steve',false,'Captain America', 'Un maigrichon dopé par  l armee'));
         $this->addHero(new Hero('Romanof','Natasha',false,'La Veuve Noire', 'La james bond girl qui a pris la place de 007'));
-    
+        $this->addHero(new Hero("Barnes","Bucky",false,"Le soldat de l'hiver", "L'un des meilleurs amis/ennemis de Captain America"));
+        $this->addHero(new Hero("Barnes","Bucky",true,"Magneto", "Le roi du magnétisme et meilleur ami de Charles Xavier"));
+        $this->addHero(new Hero("Barnes","Bucky",true,"Thanos", "Le titan fou"));
+        $this->addHero(new Hero("Barnes","Bucky",true,"Galactus", "Le dévoreur de mondes"));
     }
-    public function getList()
-    {
+    public function getList(){
         return $this->_listeHeros;
     }
-    public function addHero($pHero)
-    {
+    public function addHero($pHero){
         array_push($this->_listeHeros,$pHero);
     }
-    public function getHero($pId)
-    {
+    public function getHero($pId){
         $find = false;
         $hero = null;
         $i = 0; 
