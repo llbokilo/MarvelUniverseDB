@@ -14,4 +14,8 @@ class OrganisationController extends AbstractController
     public function index(): Response{
         return $this->render('organisation/index.html.twig', ['controller_name' => 'OrganisationController',]);
     }
+
+    public function newOrga():Response{
+        return $this->render('organisation/creer.html.twig',[]);
+    }
 }
