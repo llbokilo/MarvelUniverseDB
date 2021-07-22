@@ -20,4 +20,8 @@ class HeroController extends AbstractController{
         $listeHeros =$heroService->getList();
         return $this->render('hero/list.html.twig',['heroList'=>$listeHeros]);
     }
+
+    public function newHero():Response{
+        return $this->render('heros\creer.html.twig',[]);
+    }
 }
