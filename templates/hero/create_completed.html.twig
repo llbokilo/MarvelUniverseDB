@@ -9,11 +9,5 @@
 </style>
 
 <div class="example-wrapper">
-   {% for hero in heroList %}
-    <li>{{hero.pseudo}}
-        <a href="/hero/{{hero.getId()}}"><button>Détails</button></a> <a href="/hero/delete/{{hero.getId()}}"><button type="submit">Supprimer</button>
-</a>
-   </li>
-   {% endfor %}
-</div>
+Un héro a rejoint l'univers: {{hero.pseudo}}</div>
 {% endblock %}

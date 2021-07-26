@@ -52,4 +52,11 @@ class HeroService
             $find = true;
         return  ['found'=>$find,'hero'=>$hero];
     }
+    public function delHero($pId){
+        $hero = $this->getHero($pId);
+        if ($hero['found']== true){
+            $this->_entityManager->remove($hero['hero']);
+            $this->_entityManager->flush();
+        }
+    }
 }
