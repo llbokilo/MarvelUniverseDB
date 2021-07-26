@@ -34,7 +34,7 @@ class HeroService
     }
     public function getHero($pId){
         $find = false;
-        $hero = null;
+        /* $hero = null;
         $i = 0; 
         while (($i < count($this->_listeHeros))&& $find == false)
         {
@@ -45,6 +45,11 @@ class HeroService
             }
             $i++;
         }
+        return  ['found'=>$find,'hero'=>$hero]; */
+
+        $hero = $this->_entityManager->getRepository(Hero::class)->find($pId);
+        if (isset($hero))
+            $find = true;
         return  ['found'=>$find,'hero'=>$hero];
     }
 }

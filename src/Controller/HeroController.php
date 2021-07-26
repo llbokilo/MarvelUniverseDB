@@ -26,4 +26,12 @@ class HeroController extends AbstractController{
     public function newHero():Response{
         return $this->render('heros/creer.html.twig',[]);
     }
+    /**
+    * @Route("hero/{pId}","hero_show")
+    */
+    public function show($pId, HeroService $heroService):Response
+    {
+        $hero = $heroService->getHero($pId);
+        return $this->render('hero/hero.html.twig',['hero'=>$hero['hero']]);
+    }
 }
