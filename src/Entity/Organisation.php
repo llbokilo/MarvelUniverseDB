@@ -55,4 +55,9 @@ class Organisation
 
         return $this;
     }
+
+    public function __construct($pName, $pCity){
+        $this->Name = $pName;
+        $this->City = $pCity;
+    }
 }

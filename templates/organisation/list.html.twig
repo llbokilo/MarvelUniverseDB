@@ -9,6 +9,10 @@
 </style>
 
 <div class="example-wrapper">
-    {{form(formulaire)}}
+    {% for orga in OrgaList %}
+    <li>{{orga.Name}} <a href="/organisation/{{orga.getId()}}"><button>Détails</button> <a href="/organisation/delete/{{orga.getId()}}"><button type="submit">Supprimer</button></a>
+    </li>
+
+   {% endfor %}
 </div>
 {% endblock %}
